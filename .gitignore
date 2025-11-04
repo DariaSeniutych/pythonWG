@@ -1,0 +1,38 @@
+# IDE и окружение
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.sqlite3
+*.db
+
+# Виртуальное окружение
+venv/
+.env
+*.env
+
+# Кэш и временные файлы
+*.bak
+*.tmp
+*.~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Тесты и отчёты
+htmlcov/
+coverage.xml
+*.cover
+*.pytest_cache/
+
+# Сборка
+build/
+dist/
+*.egg-info/
