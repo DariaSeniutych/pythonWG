@@ -34,7 +34,7 @@ print("повторяющиеся числа:", repeated)
 chet = []
 nechet = []
 for n in numbers:
-    if type(n) == int:
+    if isinstance(n, int):  # проверяем только целые
         if n % 2 == 0:
             chet.append(n)
         else:
@@ -42,32 +42,20 @@ for n in numbers:
 print("чётные числа:", chet)
 print("нечётные числа:", nechet)
 
-otricatelnue = []
-for n in numbers:
-    if n < 0:
-        otricatelnue.append(n)
-print("отрицатльные числа:", otricatelnue)
+otricatelnue = [n for n in numbers if n < 0]
+print("отрицательные числа:", otricatelnue)
 
-floats = []
-for n in numbers:
-    if type(n) == float:
-        floats.append(n)
+floats = [n for n in numbers if isinstance(n, float)]
 print("числа с плавающей точкой:", floats)
 
 kratn5 = 0
 for n in numbers:
-    if type(n) == int and n % 5 == 0:
-        total = kratn5 + n
+    if isinstance(n, int) and n % 5 == 0:
+        kratn5 += n
 print("сумма чисел, кратных 5:", kratn5)
 
-biggest = numbers[0]
-for n in numbers:
-    if n > biggest:
-        biggest = n
+biggest = max(numbers)
 print("самое большое число:", biggest)
 
-smallest = numbers[0]
-for n in numbers:
-    if n < smallest:
-        smallest = n
+smallest = min(numbers)
 print("самое маленькое число:", smallest)
