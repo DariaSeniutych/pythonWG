@@ -21,6 +21,12 @@ def merge_sorted_lists(list1, list2):
 
     return resultat
 
-a = [1, 3, 5]
-b = [2, 4, 6]
-print(merge_sorted_lists(a, b))
+numbers1 = input("Введите первый отсортированный список чисел через пробел: ")
+numbers2 = input("Введите второй отсортированный список чисел через пробел: ")
+
+list1 = [int(x) for x in numbers1.split()]
+list2 = [int(x) for x in numbers2.split()]
+
+result = merge_sorted_lists(list1, list2)
+
+print("Объединённый отсортированный список:", result)
