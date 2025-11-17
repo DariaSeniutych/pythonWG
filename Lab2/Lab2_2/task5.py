@@ -9,7 +9,7 @@ def cache(func):
     return wrapper
 
 @cache
-def slow_add(a, b):
+def slow_add(a, b, args, kwargs):
     return a + b
 print(slow_add(2, 3))
 print(slow_add(2, 3))
