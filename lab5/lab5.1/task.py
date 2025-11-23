@@ -54,7 +54,6 @@ def extract_country_info(country_name, html_content):
             if td:
                 a_tag = td.find("a")
                 capital = a_tag.get_text(strip=True) if a_tag else td.get_text(strip=True)
-                # Убираем уточнения в скобках
                 if " (" in capital:
                     capital = capital.split(" (")[0]
 
@@ -98,8 +97,8 @@ def extract_country_info(country_name, html_content):
 
 def main():
     parser = argparse.ArgumentParser(description="парсер данных о странах с англоязычной википедии")
-    parser.add_argument("input", help="путь к файлу со списком стран (например, countries.txt)")
-    parser.add_argument("output", help="путь к выходному CSV-файлу (например, countries_data.csv)")
+    parser.add_argument("input", help="путь к файлу со списком стран")
+    parser.add_argument("output", help="путь к выходному CSV-файлу")
     args = parser.parse_args()
 
     try:
