@@ -1,0 +1,21 @@
+# Кэш HTML-страниц
+cache/
+
+# Выходной CSV-файл (результат работы)
+countries_data.csv
+
+# Любые виртуальные окружения
+venv*/
+.env*/
+.env
+*.env
+__pycache__/
+*.pyc
+
+# Игнорировать любую папку, содержащую файл pyvenv.cfg (признак venv)
+*/pyvenv.cfg
+
+# Остальное стандартное
+__pycache__/
+*.pyc
+.DS_Store
